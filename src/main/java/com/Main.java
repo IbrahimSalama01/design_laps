@@ -3,10 +3,11 @@ package com;
 public class Main {
     public static void main(String[] args) {
         LibraryService library = LibraryService.getInstance();
-        FictionalBook book = new FictionalBook("Harry Potter");
+        BookFactory bookFactory = new BookFactory();
+        Book book = bookFactory.createBook("Harry Potter", "fictional");
 
-        FictionalBook physicalBook = new FictionalBook("Lord of the Rings");
-        Book historicalBook = new HistoricalBook("Outlander");
+        Book physicalBook = bookFactory.createBook("Lord of the Rings", "fictional");
+        Book historicalBook = bookFactory.createBook("Outlander", "historical");
         library.addBook(book);
         library.addBook(physicalBook);
 
