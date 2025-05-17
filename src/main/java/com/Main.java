@@ -2,7 +2,7 @@ package com;
 
 public class Main {
     public static void main(String[] args) {
-        LibraryService library = new LibraryService();
+        LibraryService library = LibraryService.getInstance();
         FictionalBook book = new FictionalBook("Harry Potter");
 
         FictionalBook physicalBook = new FictionalBook("Lord of the Rings");
