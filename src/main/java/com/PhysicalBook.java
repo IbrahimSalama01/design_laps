@@ -3,6 +3,7 @@ package com;
 public abstract class PhysicalBook extends Book implements borrowableInterface {
 
     private boolean isAvailable;
+    private int durationOfBorrowing;
 
     public PhysicalBook(String title) {
         super(title);
@@ -25,6 +26,10 @@ public abstract class PhysicalBook extends Book implements borrowableInterface {
     public void returnBook() {
         isAvailable = true;
         System.out.println("\n"+ getTitle() + " has been returned.");
+    }
+      @Override
+    public int durationOfBorrowing() {
+        return durationOfBorrowing;
     }
 
 }

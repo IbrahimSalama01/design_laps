@@ -1,6 +1,8 @@
 package com;
 
 public class FictionalBook extends PhysicalBook {
+
+
     public FictionalBook(String title) {
         super(title);
     }
@@ -10,4 +12,4 @@ public class FictionalBook extends PhysicalBook {
         super.borrowBook(user);
         System.out.println(" historical book");
     }
- }
+}
